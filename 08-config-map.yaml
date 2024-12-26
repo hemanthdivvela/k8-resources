@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+matadata: 
+  name: hemanth78s
+data:
+  course: "Devops with AWS"
+  trainer: "hemanth"
+  github: "https://github.com/hemanthdivvela/k8-resources.git"
