@@ -16,4 +16,4 @@ spec:
       valueFrom:
         configMapKeyRef:
           name: hemanth78s
-          key: traineer
+          key: trainer
