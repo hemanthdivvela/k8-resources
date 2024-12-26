@@ -7,8 +7,8 @@ spec:
   - name: nginx
     image: nginx
     envFrom:
-      - configMapRef:
-        name: hemanth78s
+    - configMapRef:
+      name: hemanth78s
     # env:
     # - name: course
     #   valueFrom:
