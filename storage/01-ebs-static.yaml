@@ -45,7 +45,7 @@ spec:
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: ebs-static
+      claimName: ebs-statics
 ---
 apiVersion: v1
 kind: Service
