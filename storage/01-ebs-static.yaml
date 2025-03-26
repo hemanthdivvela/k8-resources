@@ -26,6 +26,7 @@ spec:
       storage: 5Gi
 
 ---
+---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -46,9 +47,8 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: ebs-static
-
 ---
-apiVersion: v1  # load balncer
+apiVersion: v1
 kind: Service
 metadata:
   name: nginx-lb
@@ -60,5 +60,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80 #service-port
-    targetPort: 80 #target-port
-  
+    targetPort: 80
