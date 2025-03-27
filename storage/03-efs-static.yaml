@@ -8,8 +8,8 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  storageClassName: efs-sc
+  storageClassName: ""
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-e8a95a42
+    volumeHandle: "fs-061367f69711cfa20"
