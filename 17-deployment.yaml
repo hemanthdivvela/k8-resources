@@ -26,3 +26,18 @@ spec:
       containers:
       - name: nginx
         image: nginx:mainline-perl
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    app: nginx
+    purpose: deployment
+    tier: web
+  ports:
+  - protocol: TCP
+    port: 80 #service -port
+    targetPort: 80 # target-ports
