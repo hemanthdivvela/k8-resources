@@ -7,12 +7,12 @@ spec:
     nodeAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: project
+        preference:
+          matchExpressions:
+          - key: another-node-label-key
             operator: In
             values:
-            - expense
+            - another-node-label-value
   containers:
   - name: with-node-affinity
     image: nginx
