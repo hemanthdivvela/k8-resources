@@ -13,7 +13,8 @@ spec:
   tolerations:
   - key: "project"
     operator: "Equal"
-    effect: "expense"
+    value: "expense"
+    effect: "NoSchedule"
   - key: "project"
     operator: "Exists"
-    effect: "expense"
+    effect: "NoSchedule"
