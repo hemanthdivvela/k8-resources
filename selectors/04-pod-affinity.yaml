@@ -11,3 +11,25 @@ spec:
   - name: nginx
     image: nginx
     imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    name: pod-1
+    purpose: affinity
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: name
+            operator: In
+            values:
+            - pod-1
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always
