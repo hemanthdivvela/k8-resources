@@ -15,13 +15,13 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: pod-2
   labels:
     name: pod-1
     purpose: affinity
 spec:
   affinity:
-    nodeAffinity:
+    podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
